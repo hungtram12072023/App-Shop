@@ -1,0 +1,96 @@
+@use "sass:map";
+@import "style/pages/all";
+.container__categories{
+    max-width: 1200px !important;
+    margin-top: 30px !important;
+    .categories_slider{
+        .categories_slide_item{
+            height: 300px;
+            position: relative;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: top center;
+            border-radius: 5px;
+            margin-left: 10px;
+            p{
+                position: absolute;
+                left: 5%;
+                bottom: 20px;
+                text-align: center;
+                font-size: 18px;
+                color: black;
+                font-weight: bold;
+                text-transform: uppercase;
+                letter-spacing: 2px;
+                padding: 12px 0px 10px;
+                width: 270px;
+                cursor: pointer;
+                margin-top: 10px;
+                &:hover{
+                    color: white;
+                    background: map-get($theme-color, "main");
+                }
+            }
+        }
+    }
+}
+.featured{
+    margin-top: 50px;
+    .section-title{
+        text-align: center;
+        margin-bottom: 50px;
+        h2{
+            position: relative;
+        }
+        h2:after{
+            position: absolute;
+            left: 0;
+            bottom: -15px;
+            right: 0;
+            height: 4px;
+            width: 80px;
+            background-color: map-get($theme-color, "main" );
+            content: "";
+            margin: 0 auto;
+        }
+    }
+    .react-tabs {
+        ul{
+            display: flex;
+            justify-content: center;
+            margin-bottom: 50px;
+        }
+        li{
+            list-style: none;
+            font-size: 18px;
+            color:black;
+            display: inline-block;
+            margin-right: 25px;
+            position: relative;
+            cursor: pointer
+            ;
+        }
+    }
+}
+.banner{
+    margin-bottom: 20px;
+    img{
+        width: 100%;
+    }
+}
+@include Reponsive($MEDIUM_DEVICE){
+    .container{
+        width: 990px !important;
+    }
+}
+@include Reponsive($TABLET_DEVICE){
+    .container{
+        width: 750px !important;
+    }
+}
+
+@include Reponsive($WIDE_MOBILE){
+    .container{
+        width: 540px !important;
+    }
+}

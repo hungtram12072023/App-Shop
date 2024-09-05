@@ -1,0 +1,63 @@
+@use "sass:map";
+@import "style/pages/theme";
+
+.product_img_detail{
+    display: flex;
+    column-gap: 5px;
+    img{
+        flex:0 0 65%;
+        width: 320px;
+        object-fit: cover;
+    }
+    .product_img_main{
+        flex:0 0 35%;
+        display: grid;
+        align-items: stretch;
+        row-gap: 5px;
+
+        img{
+            width: 60%;
+            object-fit: cover;
+        }
+    }
+}
+.product_text_detail{
+    h2{
+        color: #252525;
+        font-weight: 700;
+    }
+    .seen-icon{
+        display: flex;
+        align-items: center;
+        font-size: 13px;
+        line-height: 30px;
+        column-gap: 5px;
+    }
+    p{
+        margin: 10px 0;
+        line-height: 25px;
+    }
+    ul{
+        margin: 20px 0;
+        border-top:1px solid #eee ;
+        padding-top: 20px;
+        li{
+            list-style: none;
+            display: flex;
+            column-gap: 20px;
+            line-height: 35px;
+            b{
+                width: 150px;
+            }
+            span{
+                display: flex;
+            column-gap: 10px;
+            align-items: center;
+            svg{
+                font-size: 20px;
+                cursor: pointer;
+            }
+            }
+        }
+    }
+}

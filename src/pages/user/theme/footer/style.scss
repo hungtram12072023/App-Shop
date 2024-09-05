@@ -1,0 +1,98 @@
+@use "sass:map";
+@import "style/pages/theme";
+
+.footer{
+    background-color: #f3f6fa;
+    padding-top: 70px;
+    padding-bottom: 0;
+    clear: both;
+    .footer_about{
+        .footer_about_logo{
+            display: inline-block;
+        }
+        ul li{
+            list-style: none;
+            font-size: 16px;
+            color: black;
+            line-height: 36px;
+            list-style: none;
+        }
+    }
+    .footer_widget{
+        
+        margin-bottom: 30px;
+        overflow: hidden;
+        h5{
+            color: map-get($theme-color , "normal-text" );
+            margin-bottom: 10px;
+            font-size: 16px;
+            font-weight: 700;
+        }
+        ul{
+            float: left;
+            width: 50%;
+            li{
+                list-style: none;
+                a{
+                    text-decoration: none;
+                    color: map-get($theme-color , "normal-text" );
+                    font-size: 16px;
+                    line-height: 32px;
+
+                }
+            }
+        }
+        p{
+            font-size: 16px;
+            color: map-get($theme-color , "normal-text" );
+            margin-bottom: 30px;
+        }
+        form{
+            position: relative;
+            margin-bottom: 30px;
+            .input-group{
+                display: flex;
+                align-items: center;
+            input{
+                width: 100%;
+                font-size: 16px;
+                padding-left: 20px;
+                color: map-get($theme-color , "normal-text" );
+                height: 46px;
+                border: 1px solid #ededed;
+                ::placeholder{
+                    color: map-get($theme-color , "normal-text" );
+                }
+            }
+            button{
+                padding: 0 26px;
+                height: 46px;
+                min-width: max-content;
+            }
+        }
+        }
+        .footer_widget_social{
+            display: flex;
+            align-items: center;
+            column-gap: 10px;
+            margin-top: 20px;
+            div{
+                :hover{
+                    background:map-get($theme-color , "main" ); 
+                    color: #ffffff;
+                    border-color: #ffffff;
+                }
+                svg{
+                    font-size: 20px;
+                    padding: 10px;
+                    border: 1px solid #dedede;
+                    color: #040404;
+                    border-radius: 50px;
+                    transition: all 0.3s;
+                    background: white;
+                }
+            }}
+        }
+        
+    }
+
